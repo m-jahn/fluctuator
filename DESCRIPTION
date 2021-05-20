@@ -1,0 +1,16 @@
+Package: fluctuator
+Type: Package
+Title: An Interface to Import and Modify SVG (XML) Graphic Files
+Version: 0.1.0
+Author: Michael Jahn <michael.jahn@scilifelab.se>
+Maintainer: Michael Jahn <michael.jahn@scilifelab.se>
+Description: SVG is the primary choice for scalable, open-source graphic files. This packages provides a simple interface to import SVG graphic files in to R, modify these in a programmatic way, and export the files again. The purpose of this package is to overlay scientific data on medium or large scale network representations, which is too laborious and time-consuming to do manually. SVG Graphics have to be drawn beforehand, for example using Inkscape. Objects ("nodes") are than identified and modified using unique IDs/label in R.
+License: GPL-3 + file LICENSE
+Depends: R (>= 3.5.0)
+Imports:
+    methods,
+    XML,
+    dplyr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
