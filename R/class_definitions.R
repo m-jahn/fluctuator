@@ -18,13 +18,10 @@ XMLsvg <- setClass("XMLsvg",
 )
 
 # Generic methods for the new class
-# ----------------------------------------
-#summary <- function(object) {
-#  UseMethod("summary")
-#}
-summary.XMLsvg <- function(xml) {
+#' @export
+summary.XMLsvg <- function(object, digits = 12L, ...) {
   cat("Attribute summary:\n")
-  print(summary(xml@svg))
+  summary.default(object@svg, digits = digits, ...)
   cat("\nAttribute table:\n")
-  print(xml@summary)
+  summary.default(object@summary, digits = digits, ...)
 }
