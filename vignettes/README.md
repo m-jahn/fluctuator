@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-05-20
+2021-05-21
 
 <!-- include logo-->
 
@@ -44,11 +44,27 @@ devtools::install_github("m-jahn/fluctuator")
 
 ## Usage
 
+### Make an SVG template (with Inkscape)
+
+The first step is to create an SVG file depicting e.g. a metabolic
+network. Inkscape is a free, open source software for vector images and
+natively supports SVG. Every item (node) that is created gets a cryptic
+label in Inkscape, such as `path-123-456-0-1`. All we need to do is to
+open the object dialog and change labels to more human readable names
+(see picture). These are later used to identify objects in R. I
+recommend using different prefixes for different types of objects, like
+`node_XYZ` for the nodes of a network, and `reaction_XYZ` for
+connections between nodes.
+
+<!-- include logo-->
+
+<img src="../images/make_template.png" align="right" />
+
 ### Read SVG
 
-We can import a simple SVG file representing a network. The resulting
-`XMLsvg` has two slots, the original XML structure and a feature table
-with all graphical objects (“nodes”) and their attributes.
+We can then import the SVG file in R using `read_svg()`. The resulting
+object of class `XMLsvg` has two slots, the original XML structure and a
+feature table with all graphical objects (nodes) and their attributes.
 
 ``` r
 library(fluctuator)
@@ -65,37 +81,22 @@ class(SVG)
     ## [1] "fluctuator"
 
 ``` r
-# get a summary
-summary(SVG)
+# access summary table of objects/nodes
+head(SVG@summary)
 ```
 
-    ## Attribute summary:
-    ## 
-    ## Attribute table:
-
-    ##                     Length Class  Mode     
-    ## node_no             14     -none- character
-    ## id                  14     -none- character
-    ## d                   14     -none- character
-    ## style               14     -none- character
-    ## transform           14     -none- character
-    ## connector-curvature 14     -none- character
-    ## node_set            14     -none- character
-    ## label               14     -none- character
-    ## cx                  14     -none- character
-    ## cy                  14     -none- character
-    ## r                   14     -none- character
-    ## stockid             14     -none- character
-    ## orient              14     -none- character
-    ## refY                14     -none- character
-    ## refX                14     -none- character
-    ## isstock             14     -none- character
-    ## space               14     -none- character
-    ## x                   14     -none- character
-    ## y                   14     -none- character
-    ## role                14     -none- character
-    ## width               14     -none- character
-    ## height              14     -none- character
+    ## # A tibble: 6 x 22
+    ##   node_no id     d       style   transform `connector-curv… node_set label cx   
+    ##   <chr>   <chr>  <chr>   <chr>   <chr>     <chr>            <chr>    <chr> <chr>
+    ## 1 1       path4… M 5.77… fill:#… scale(0.… 0                path     <NA>  <NA> 
+    ## 2 2       path4… M 5.77… fill:#… scale(0.… 0                path     <NA>  <NA> 
+    ## 3 3       path4… M 52.2… fill:#… <NA>      0                path     ABC   <NA> 
+    ## 4 4       path4… M 60.7… fill:#… <NA>      0                path     DEF   <NA> 
+    ## 5 5       path4… <NA>    color:… <NA>      <NA>             circle   node… 56.4…
+    ## 6 6       path4… <NA>    color:… <NA>      <NA>             circle   node… 34.3…
+    ## # … with 13 more variables: cy <chr>, r <chr>, stockid <chr>, orient <chr>,
+    ## #   refY <chr>, refX <chr>, isstock <chr>, space <chr>, x <chr>, y <chr>,
+    ## #   role <chr>, width <chr>, height <chr>
 
 ### Get attributes of SVG
 

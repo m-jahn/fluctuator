@@ -39,9 +39,17 @@ devtools::install_github("m-jahn/fluctuator")
 
 ## Usage
 
+### Make an SVG template (with Inkscape)
+
+The first step is to create an SVG file depicting e.g. a metabolic network. Inkscape is a free, open source software for vector images and natively supports SVG. Every item (node) that is created gets a cryptic label in Inkscape, such as `path-123-456-0-1`. All we need to do is to open the object dialog and change labels to more human readable names (see picture). These are later used to identify objects in R. I recommend using different prefixes for different types of objects, like `node_XYZ` for the nodes of a network, and `reaction_XYZ` for connections between nodes.
+
+<!-- include logo-->
+<img src="../images/make_template.png" align="right" />
+
+
 ### Read SVG
 
-We can import a simple SVG file representing a network. The resulting `XMLsvg` has two slots, the original XML structure and a feature table with all graphical objects ("nodes") and their attributes.
+We can then import the SVG file in R using `read_svg()`. The resulting object of class `XMLsvg` has two slots, the original XML structure and a feature table with all graphical objects (nodes) and their attributes.
 
 ```{r}
 library(fluctuator)
@@ -52,8 +60,8 @@ SVG <- read_svg("../images/example_network.svg")
 # show class
 class(SVG)
 
-# get a summary
-summary(SVG)
+# access summary table of objects/nodes
+head(SVG@summary)
 ```
 ### Get attributes of SVG
 

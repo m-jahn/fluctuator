@@ -10,8 +10,8 @@ SVG <- read_svg("../images/example_network.svg")
 # show class
 class(SVG)
 
-# get a summary
-summary(SVG)
+# access summary table of objects/nodes
+head(SVG@summary)
 
 ## -----------------------------------------------------------------------------
 get_attributes(SVG, node = "node_1", attr = c("label", "style"))
