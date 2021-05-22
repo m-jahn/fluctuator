@@ -51,7 +51,8 @@ The first step is to create an SVG file depicting e.g. a metabolic network. Inks
 
 We can then import the SVG file in R using `read_svg()`. The resulting object of class `XMLsvg` has two slots, the original XML structure and a feature table with all graphical objects (nodes) and their attributes.
 
-```{r}
+```{r, message = FALSE}
+library(dplyr)
 library(fluctuator)
 
 # import example map
@@ -100,4 +101,64 @@ Original SVG                        |  Modified SVG
 ![](../images/example_network.png)  |  ![](../images/example_network_mod.png)
 
 
-<!-- ### Real world example -->
+### Real world example
+
+Let's import a reduced network of the central carbon metabolism of the bacterium *Cupriavidus necator*. We can inspect the Inkscape names of all reactions in the summary table (column `label`).
+
+
+```{r}
+SVG2 <- read_svg("../images/central_metabolism.svg")
+head(SVG2@summary)
+```
+
+The network has objects for metabolites, reactions, and reaction text labels. We want to modify thickness of arrows representing flux through reactions. We import a table with flux data matching the reactions in the SVG file.
+
+```{r}
+data(metabolic_flux)
+head(metabolic_flux)
+```
+
+Then we inspect the style of the nodes that we want to change, and find the text bit for `stroke-width`.
+
+```{r}
+get_attributes(SVG2, node = "GAPDH") %>% pull(style)
+```
+
+As some reactions have very high flux and others no flux at all, we apply a square root transformation to the fluxes so that stroke width is more balanced.
+
+```{r}
+metabolic_flux_for <- metabolic_flux %>%
+  filter(substrate == "formate") %>%
+  mutate(stroke_width = 0.2 + 0.2*sqrt(abs(flux_mmol_gDCW_h)))
+
+SVG2 <- set_attributes(SVG2,
+  node = metabolic_flux_for$reaction, attr = "style",
+  pattern = "stroke-width:[0-9]+\\.[0-9]+",
+  replacement = paste0("stroke-width:", metabolic_flux_for$stroke_width))
+```
+
+We can also change the color of all non-zero fluxes to green.
+
+```{r}
+reactions_green <- metabolic_flux %>%
+  filter(substrate == "formate", flux_mmol_gDCW_h != 0) %>%
+  pull(reaction)
+
+SVG2 <- set_attributes(SVG2,
+  node = reactions_green, attr = "style",
+  pattern = "stroke:#808080",
+  replacement = "stroke:#008A12")
+```
+
+Export the modified SVG file.
+
+```{r}
+write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
+```
+
+
+Original SVG               |  SVG with overlaid fluxes
+:-------------------------:|:-------------------------:
+![](../images/central_metabolism.png)  |  ![](../images/central_metabolism_mod.png)
+
+

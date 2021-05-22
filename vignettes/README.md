@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-05-21
+2021-05-22
 
 <!-- include logo-->
 
@@ -67,6 +67,7 @@ object of class `XMLsvg` has two slots, the original XML structure and a
 feature table with all graphical objects (nodes) and their attributes.
 
 ``` r
+library(dplyr)
 library(fluctuator)
 
 # import example map
@@ -154,4 +155,95 @@ write_svg(SVG, file = "../images/example_network_mod.svg")
 | :--------------------------------: | :------------------------------------: |
 | ![](../images/example_network.png) | ![](../images/example_network_mod.png) |
 
-<!-- ### Real world example -->
+### Real world example
+
+Let’s import a reduced network of the central carbon metabolism of the
+bacterium *Cupriavidus necator*. We can inspect the Inkscape names of
+all reactions in the summary table (column `label`).
+
+``` r
+SVG2 <- read_svg("../images/central_metabolism.svg")
+head(SVG2@summary)
+```
+
+    ## # A tibble: 6 x 24
+    ##   node_no id     d     style transform `connector-curv… node_set nodetypes label
+    ##   <chr>   <chr>  <chr> <chr> <chr>     <chr>            <chr>    <chr>     <chr>
+    ## 1 1       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## 2 2       path1… M 5.… fill… scale(-0… 0                path     <NA>      <NA> 
+    ## 3 3       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## 4 4       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## 5 5       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## 6 6       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## # … with 15 more variables: stockid <chr>, orient <chr>, refY <chr>,
+    ## #   refX <chr>, isstock <chr>, collect <chr>, y <chr>, x <chr>, role <chr>,
+    ## #   space <chr>, cx <chr>, cy <chr>, r <chr>, width <chr>, height <chr>
+
+The network has objects for metabolites, reactions, and reaction text
+labels. We want to modify thickness of arrows representing flux through
+reactions. We import a table with flux data matching the reactions in
+the SVG file.
+
+``` r
+data(metabolic_flux)
+head(metabolic_flux)
+```
+
+    ## # A tibble: 6 x 3
+    ##   substrate reaction flux_mmol_gDCW_h
+    ##   <chr>     <chr>               <dbl>
+    ## 1 formate   ACONT               0.366
+    ## 2 formate   AKGDH               0    
+    ## 3 formate   CS                  0.366
+    ## 4 formate   EDA                 0    
+    ## 5 formate   EDD                 0    
+    ## 6 formate   ENO                 3.98
+
+Then we inspect the style of the nodes that we want to change, and find
+the text bit for `stroke-width`.
+
+``` r
+get_attributes(SVG2, node = "GAPDH") %>% pull(style)
+```
+
+    ## [1] "opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.34395832;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker11347);marker-end:url(#marker66490);enable-background:new"
+
+As some reactions have very high flux and others no flux at all, we
+apply a square root transformation to the fluxes so that stroke width is
+more balanced.
+
+``` r
+metabolic_flux_for <- metabolic_flux %>%
+  filter(substrate == "formate") %>%
+  mutate(stroke_width = 0.2 + 0.2*sqrt(abs(flux_mmol_gDCW_h)))
+
+SVG2 <- set_attributes(SVG2,
+  node = metabolic_flux_for$reaction, attr = "style",
+  pattern = "stroke-width:[0-9]+\\.[0-9]+",
+  replacement = paste0("stroke-width:", metabolic_flux_for$stroke_width))
+```
+
+We can also change the color of all non-zero fluxes to green.
+
+``` r
+reactions_green <- metabolic_flux %>%
+  filter(substrate == "formate", flux_mmol_gDCW_h != 0) %>%
+  pull(reaction)
+
+SVG2 <- set_attributes(SVG2,
+  node = reactions_green, attr = "style",
+  pattern = "stroke:#808080",
+  replacement = "stroke:#008A12")
+```
+
+Export the modified SVG file.
+
+``` r
+write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
+```
+
+    ## [1] "../images/central_metabolism_mod.svg"
+
+|             Original SVG              |         SVG with overlaid fluxes          |
+| :-----------------------------------: | :---------------------------------------: |
+| ![](../images/central_metabolism.png) | ![](../images/central_metabolism_mod.png) |
