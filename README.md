@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-05-22
+2021-05-24
 
 <!-- include logo-->
 
@@ -234,6 +234,27 @@ SVG2 <- set_attributes(SVG2,
   node = reactions_green, attr = "style",
   pattern = "stroke:#808080",
   replacement = "stroke:#008A12")
+```
+
+And for better look, reduce the size of the arrow heads. Arrow heads are
+called `marker` in Inkscape SVG (note that node name attribute changed
+to `id`). To modify size, we change the `transform` field of the marker
+nodes. Needs to be done separately for start and end arrows.
+
+``` r
+SVG2 <- set_attributes(SVG2, 
+  node = grep("marker", SVG2@summary$id, value = TRUE),
+  node_attr = "id",
+  attr = "transform",
+  pattern = "scale\\(0.2\\)",
+  replacement = "scale(0.15)")
+
+SVG2 <- set_attributes(SVG2, 
+  node = grep("marker", SVG2@summary$id, value = TRUE),
+  node_attr = "id",
+  attr = "transform",
+  pattern = "scale\\(-0.2\\)",
+  replacement = "scale(-0.15)")
 ```
 
 Export the modified SVG file.

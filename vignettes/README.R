@@ -60,5 +60,20 @@ SVG2 <- set_attributes(SVG2,
   replacement = "stroke:#008A12")
 
 ## -----------------------------------------------------------------------------
+SVG2 <- set_attributes(SVG2, 
+  node = grep("marker", SVG2@summary$id, value = TRUE),
+  node_attr = "id",
+  attr = "transform",
+  pattern = "scale\\(0.2\\)",
+  replacement = "scale(0.15)")
+
+SVG2 <- set_attributes(SVG2, 
+  node = grep("marker", SVG2@summary$id, value = TRUE),
+  node_attr = "id",
+  attr = "transform",
+  pattern = "scale\\(-0.2\\)",
+  replacement = "scale(-0.15)")
+
+## -----------------------------------------------------------------------------
 write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
 

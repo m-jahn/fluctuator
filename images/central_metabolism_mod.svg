@@ -2,197 +2,197 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="235" height="275" viewBox="0 0 62.177084 72.760411" version="1.1" id="svg8" inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)" sodipodi:docname="central_metabolism.svg" inkscape:export-filename="/home/michael/Documents/SciLifeLab/Resources/R_projects/fluctuator/images/central_metabolism.png" inkscape:export-xdpi="300" inkscape:export-ydpi="300" style="enable-background:new">
   <defs id="defs2">
-    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker148665" style="overflow:visible" inkscape:isstock="true">
-      <path id="path148663" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker148665" style="overflow:visible" inkscape:isstock="true" transform="character(0)">
+      <path id="path148663" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:stockid="TriangleInS" orient="auto" refY="0" refX="0" id="marker146969" style="overflow:visible" inkscape:isstock="true">
-      <path id="path146967" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(-0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleInS" orient="auto" refY="0" refX="0" id="marker146969" style="overflow:visible" inkscape:isstock="true" transform="character(0)">
+      <path id="path146967" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker143991" style="overflow:visible" inkscape:isstock="true">
-      <path id="path143989" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker143991" style="overflow:visible" inkscape:isstock="true" transform="character(0)">
+      <path id="path143989" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker142277" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" inkscape:collect="always">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path142275" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker142277" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" inkscape:collect="always" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path142275" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker140287" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always">
-      <path id="path140285" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker140287" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always" transform="character(0)">
+      <path id="path140285" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker139651" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" inkscape:collect="always">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path139649" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker139651" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" inkscape:collect="always" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path139649" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker134159" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always">
-      <path id="path134157" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker134159" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always" transform="character(0)">
+      <path id="path134157" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:stockid="TriangleInS" orient="auto" refY="0" refX="0" id="marker129031" style="overflow:visible" inkscape:isstock="true">
-      <path id="path129029" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(-0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleInS" orient="auto" refY="0" refX="0" id="marker129031" style="overflow:visible" inkscape:isstock="true" transform="character(0)">
+      <path id="path129029" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker124014" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path124012" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker124014" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path124012" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker122390" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path122388" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker122390" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path122388" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker82272" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path82270" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker82272" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path82270" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker80800" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" inkscape:collect="always">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path80798" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker80800" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" inkscape:collect="always" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path80798" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker79334" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path79332" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker79334" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path79332" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker77884" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path77882" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker77884" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path77882" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker76440" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path76438" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker76440" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path76438" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker76430" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path76428" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker76430" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path76428" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker74992" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path74990" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker74992" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path74990" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker73560" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path73558" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker73560" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path73558" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker70714" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path70712" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker70714" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path70712" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker69300" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path69298" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker69300" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path69298" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker67892" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path67890" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker67892" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path67890" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker66490" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path66488" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker66490" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path66488" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker65094" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS">
-      <path transform="scale(0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path65092" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker65094" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleOutS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path65092" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker60934" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always">
-      <path id="path7795" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(0.2)" inkscape:connector-curvature="0"/>
+    <marker inkscape:stockid="TriangleOutS" orient="auto" refY="0" refX="0" id="marker60934" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always" transform="character(0)">
+      <path id="path7795" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" inkscape:connector-curvature="0" transform="scale(0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker59533" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path59531" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker59533" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path59531" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker59523" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path59521" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker59523" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path59521" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker58145" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path58143" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker58145" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path58143" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker55407" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path55405" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker55407" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path55405" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker54047" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path54045" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker54047" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path54045" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker52693" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path52691" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker52693" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path52691" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker51345" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path51343" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker51345" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path51343" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker50003" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path50001" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker50003" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path50001" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker47337" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path47335" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker47337" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path47335" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker46013" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path46011" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker46013" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path46011" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker44695" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path44693" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker44695" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path44693" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker44685" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path44683" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker44685" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path44683" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker43373" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path43371" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker43373" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path43371" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker42067" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path42065" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker42067" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path42065" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker40767" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path40765" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker40767" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path40765" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker39473" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path39471" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker39473" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path39471" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker38185" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path38183" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker38185" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path38183" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker36903" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path36901" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker36903" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path36901" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker35627" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path35625" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker35627" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path35625" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker34357" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path34355" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker34357" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path34355" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker31835" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path31833" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker31835" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path31833" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker31825" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path31823" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker31825" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path31823" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker30573" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path30571" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker30573" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path30571" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker28087" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" inkscape:collect="always">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path28085" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker28087" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" inkscape:collect="always" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path28085" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker26853" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path26851" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker26853" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path26851" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker25625" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path25623" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker25625" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path25623" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker23187" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path23185" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker23187" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path23185" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker21977" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path21975" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker21977" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path21975" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker20773" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path20771" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker20773" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path20771" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker19575" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path19573" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker19575" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path19573" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker19565" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path19563" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker19565" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path19563" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker18373" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path18371" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker18373" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path18371" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker17187" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path17185" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker17187" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path17185" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker16007" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path16005" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker16007" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path16005" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker14833" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path14831" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker14833" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path14831" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker13665" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path13663" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker13665" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path13663" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker12503" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path12501" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker12503" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path12501" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker11347" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path11345" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker11347" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path11345" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker10197" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path10195" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker10197" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path10195" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
-    <marker inkscape:isstock="true" style="overflow:visible" id="marker9053" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS">
-      <path transform="scale(-0.2)" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path9051" inkscape:connector-curvature="0"/>
+    <marker inkscape:isstock="true" style="overflow:visible" id="marker9053" refX="0" refY="0" orient="auto" inkscape:stockid="TriangleInS" transform="character(0)">
+      <path style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" d="M 5.77,0 -2.88,5 V -5 Z" id="path9051" inkscape:connector-curvature="0" transform="scale(-0.15)"/>
     </marker>
     <marker inkscape:stockid="TriangleInS" orient="auto" refY="0" refX="0" id="TriangleInS" style="overflow:visible" inkscape:isstock="true" inkscape:collect="always">
       <path id="path7786" d="M 5.77,0 -2.88,5 V -5 Z" style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1.00000003pt;stroke-opacity:1" transform="scale(-0.2)" inkscape:connector-curvature="0"/>
