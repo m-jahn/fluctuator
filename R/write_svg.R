@@ -11,5 +11,5 @@
 #' @export
 write_svg <- function(x, file) {
   # export only the xml/svg slot of the object
-  XML::saveXML(x@svg, file = file)
+  XML::saveXML(x@svg, file = file, indent = FALSE)
 }
