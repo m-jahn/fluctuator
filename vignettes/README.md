@@ -1,13 +1,13 @@
 fluctuator
 ================
 Michael Jahn
-2021-05-24
+2021-09-01
 
 <!-- include logo-->
 
 <img src="../images/logo.png" align="right" />
 
------
+------------------------------------------------------------------------
 
 An Interface to Import and Modify SVG (XML) Graphic Files in R.
 
@@ -28,10 +28,10 @@ Options to customize the metabolic maps are too restricted.
 
 Package info:
 
-  - Maintainer: Michael Jahn, Science for Life Lab, Stockholm
-  - License: GPL-3
-  - Depends: R (\>= 3.5.0)
-  - Imports: `methods`, `XML`, `dplyr`
+-   Maintainer: Michael Jahn, Science for Life Lab, Stockholm
+-   License: GPL-3
+-   Depends: R (&gt;= 3.5.0)
+-   Imports: `methods`, `XML`, `dplyr`
 
 ## Installation
 
@@ -152,7 +152,7 @@ write_svg(SVG, file = "../images/example_network_mod.svg")
 ```
 
 |            Original SVG            |              Modified SVG              |
-| :--------------------------------: | :------------------------------------: |
+|:----------------------------------:|:--------------------------------------:|
 | ![](../images/example_network.png) | ![](../images/example_network_mod.png) |
 
 ### Real world example
@@ -266,5 +266,5 @@ write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
     ## [1] "../images/central_metabolism_mod.svg"
 
 |             Original SVG              |         SVG with overlaid fluxes          |
-| :-----------------------------------: | :---------------------------------------: |
+|:-------------------------------------:|:-----------------------------------------:|
 | ![](../images/central_metabolism.png) | ![](../images/central_metabolism_mod.png) |
