@@ -9,8 +9,16 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+<!-- badges start -->
+[![R build status](https://github.com/m-jahn/lattice-tools/workflows/R-CMD-check/badge.svg)](https://github.com/m-jahn/fluctuator/actions)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/m-jahn)
+![GitHub issues](https://img.shields.io/github/issues/m-jahn/fluctuator)
+![GitHub last commit](https://img.shields.io/github/last-commit/m-jahn/fluctuator)
+![Platform](https://img.shields.io/badge/platform-all-green)
+<!-- badges end -->
+
 <!-- include logo-->
-<img src="../images/logo.png" align="right" />
+<img src="../inst/extdata/logo.png" align="right" />
 
 ***
 
@@ -44,7 +52,7 @@ devtools::install_github("m-jahn/fluctuator")
 The first step is to create an SVG file depicting e.g. a metabolic network. Inkscape is a free, open source software for vector images and natively supports SVG. Every item (node) that is created gets a cryptic label in Inkscape, such as `path-123-456-0-1`. All we need to do is to open the object dialog and change labels to more human readable names (see picture). These are later used to identify objects in R. I recommend using different prefixes for different types of objects, like `node_XYZ` for the nodes of a network, and `reaction_XYZ` for connections between nodes.
 
 <!-- include logo-->
-<img src="../images/make_template.png" align="right" />
+<img src="../inst/extdata/make_template.png" align="right" />
 
 
 ### Read SVG
@@ -56,7 +64,7 @@ library(dplyr)
 library(fluctuator)
 
 # import example map
-SVG <- read_svg("../images/example_network.svg")
+SVG <- read_svg("../inst/extdata/example_network.svg")
 
 # show class
 class(SVG)
@@ -93,12 +101,12 @@ SVG <- set_attributes(SVG, node = c("ABC", "DEF"), attr = "style",
 Modified SVG files can be saved to disk using `write_svg()`.
 
 ```{r, eval = FALSE}
-write_svg(SVG, file = "../images/example_network_mod.svg")
+write_svg(SVG, file = "../inst/extdata/example_network_mod.svg")
 ```
 
 Original SVG                        |  Modified SVG
 :-------------------------:|:-------------------------:
-![](../images/example_network.png)  |  ![](../images/example_network_mod.png)
+![](../inst/extdata/example_network.png)  |  ![](../inst/extdata/example_network_mod.png)
 
 
 ### Real world example
@@ -107,7 +115,7 @@ Let's import a reduced network of the central carbon metabolism of the bacterium
 
 
 ```{r}
-SVG2 <- read_svg("../images/central_metabolism.svg")
+SVG2 <- read_svg("../inst/extdata/central_metabolism.svg")
 head(SVG2@summary)
 ```
 
@@ -171,12 +179,12 @@ SVG2 <- set_attributes(SVG2,
 Export the modified SVG file.
 
 ```{r}
-write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
+write_svg(SVG2, file = "../inst/extdata/central_metabolism_mod.svg")
 ```
 
 
 Original SVG               |  SVG with overlaid fluxes
 :-------------------------:|:-------------------------:
-![](../images/central_metabolism.png)  |  ![](../images/central_metabolism_mod.png)
+![](../inst/extdata/central_metabolism.png)  |  ![](../inst/extdata/central_metabolism_mod.png)
 
 

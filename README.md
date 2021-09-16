@@ -1,13 +1,24 @@
 fluctuator
 ================
 Michael Jahn
-2021-05-24
+2021-09-16
+
+<!-- badges start -->
+
+[![R build
+status](https://github.com/m-jahn/lattice-tools/workflows/R-CMD-check/badge.svg)](https://github.com/m-jahn/fluctuator/actions)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/m-jahn)
+![GitHub issues](https://img.shields.io/github/issues/m-jahn/fluctuator)
+![GitHub last
+commit](https://img.shields.io/github/last-commit/m-jahn/fluctuator)
+![Platform](https://img.shields.io/badge/platform-all-green)
+<!-- badges end -->
 
 <!-- include logo-->
 
-<img src="images/logo.png" align="right" />
+<img src="inst/extdata/logo.png" align="right" />
 
------
+------------------------------------------------------------------------
 
 An Interface to Import and Modify SVG (XML) Graphic Files in R.
 
@@ -28,10 +39,10 @@ Options to customize the metabolic maps are too restricted.
 
 Package info:
 
-  - Maintainer: Michael Jahn, Science for Life Lab, Stockholm
-  - License: GPL-3
-  - Depends: R (\>= 3.5.0)
-  - Imports: `methods`, `XML`, `dplyr`
+-   Maintainer: Michael Jahn, Science for Life Lab, Stockholm
+-   License: GPL-3
+-   Depends: R (&gt;= 3.5.0)
+-   Imports: `methods`, `XML`, `dplyr`
 
 ## Installation
 
@@ -58,7 +69,7 @@ connections between nodes.
 
 <!-- include logo-->
 
-<img src="images/make_template.png" align="right" />
+<img src="inst/extdata/make_template.png" align="right" />
 
 ### Read SVG
 
@@ -71,7 +82,7 @@ library(dplyr)
 library(fluctuator)
 
 # import example map
-SVG <- read_svg("../images/example_network.svg")
+SVG <- read_svg("inst/extdata/example_network.svg")
 
 # show class
 class(SVG)
@@ -148,12 +159,12 @@ SVG <- set_attributes(SVG, node = c("ABC", "DEF"), attr = "style",
 Modified SVG files can be saved to disk using `write_svg()`.
 
 ``` r
-write_svg(SVG, file = "../images/example_network_mod.svg")
+write_svg(SVG, file = "inst/extdata/example_network_mod.svg")
 ```
 
-|            Original SVG            |              Modified SVG              |
-| :--------------------------------: | :------------------------------------: |
-| ![](images/example_network.png) | ![](images/example_network_mod.png) |
+|               Original SVG               |                 Modified SVG                 |
+|:----------------------------------------:|:--------------------------------------------:|
+| ![](inst/extdata/example_network.png) | ![](inst/extdata/example_network_mod.png) |
 
 ### Real world example
 
@@ -162,7 +173,7 @@ bacterium *Cupriavidus necator*. We can inspect the Inkscape names of
 all reactions in the summary table (column `label`).
 
 ``` r
-SVG2 <- read_svg("../images/central_metabolism.svg")
+SVG2 <- read_svg("inst/extdata/central_metabolism.svg")
 head(SVG2@summary)
 ```
 
@@ -260,11 +271,11 @@ SVG2 <- set_attributes(SVG2,
 Export the modified SVG file.
 
 ``` r
-write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
+write_svg(SVG2, file = "inst/extdata/central_metabolism_mod.svg")
 ```
 
-    ## [1] "../images/central_metabolism_mod.svg"
+    ## [1] "inst/extdata/central_metabolism_mod.svg"
 
-|             Original SVG              |         SVG with overlaid fluxes          |
-| :-----------------------------------: | :---------------------------------------: |
-| ![](images/central_metabolism.png) | ![](images/central_metabolism_mod.png) |
+|                Original SVG                 |            SVG with overlaid fluxes             |
+|:-------------------------------------------:|:-----------------------------------------------:|
+| ![](inst/extdata/central_metabolism.png) | ![](inst/extdata/central_metabolism_mod.png) |

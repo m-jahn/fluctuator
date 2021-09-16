@@ -6,7 +6,7 @@ library(dplyr)
 library(fluctuator)
 
 # import example map
-SVG <- read_svg("../images/example_network.svg")
+SVG <- read_svg("../inst/extdata/example_network.svg")
 
 # show class
 class(SVG)
@@ -26,10 +26,10 @@ SVG <- set_attributes(SVG, node = c("ABC", "DEF"), attr = "style",
   pattern = "stroke-width:1.32291663", replacement = c("stroke-width:2.5", "stroke-width:0.5"))
 
 ## ---- eval = FALSE------------------------------------------------------------
-#  write_svg(SVG, file = "../images/example_network_mod.svg")
+#  write_svg(SVG, file = "../inst/extdata/example_network_mod.svg")
 
 ## -----------------------------------------------------------------------------
-SVG2 <- read_svg("../images/central_metabolism.svg")
+SVG2 <- read_svg("../inst/extdata/central_metabolism.svg")
 head(SVG2@summary)
 
 ## -----------------------------------------------------------------------------
@@ -75,5 +75,5 @@ SVG2 <- set_attributes(SVG2,
   replacement = "scale(-0.15)")
 
 ## -----------------------------------------------------------------------------
-write_svg(SVG2, file = "../images/central_metabolism_mod.svg")
+write_svg(SVG2, file = "../inst/extdata/central_metabolism_mod.svg")
 
