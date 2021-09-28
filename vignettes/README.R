@@ -42,7 +42,7 @@ get_attributes(SVG2, node = "GAPDH") %>% pull(style)
 ## -----------------------------------------------------------------------------
 metabolic_flux_for <- metabolic_flux %>%
   filter(substrate == "formate") %>%
-  mutate(stroke_width = 0.2 + 0.2*sqrt(abs(flux_mmol_gDCW_h)))
+  mutate(stroke_width = 0.5 + 0.2*sqrt(abs(flux_mmol_gDCW_h)))
 
 SVG2 <- set_attributes(SVG2,
   node = metabolic_flux_for$reaction, attr = "style",
@@ -50,14 +50,18 @@ SVG2 <- set_attributes(SVG2,
   replacement = paste0("stroke-width:", metabolic_flux_for$stroke_width))
 
 ## -----------------------------------------------------------------------------
-reactions_green <- metabolic_flux %>%
-  filter(substrate == "formate", flux_mmol_gDCW_h != 0) %>%
-  pull(reaction)
+# make color palette
+pal <- colorRampPalette(c("#ABABAB", "#009419", "#F0B000", "#FF4800"))(10)
+
+metabolic_flux_for <- metabolic_flux_for %>%
+  mutate(
+    stroke_color = stroke_width %>% {1+(./max(.))*9} %>% round,
+    stroke_color_rgb = pal[stroke_color])
 
 SVG2 <- set_attributes(SVG2,
-  node = reactions_green, attr = "style",
+  node = metabolic_flux_for$reaction, attr = "style",
   pattern = "stroke:#808080",
-  replacement = "stroke:#008A12")
+  replacement = paste0("stroke:", metabolic_flux_for$stroke_color_rgb))
 
 ## -----------------------------------------------------------------------------
 SVG2 <- set_attributes(SVG2, 

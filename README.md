@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-09-16
+2021-09-28
 
 <!-- badges start -->
 
@@ -97,15 +97,15 @@ class(SVG)
 head(SVG@summary)
 ```
 
-    ## # A tibble: 6 x 22
-    ##   node_no id     d       style   transform `connector-curv… node_set label cx   
-    ##   <chr>   <chr>  <chr>   <chr>   <chr>     <chr>            <chr>    <chr> <chr>
-    ## 1 1       path4… M 5.77… fill:#… scale(0.… 0                path     <NA>  <NA> 
-    ## 2 2       path4… M 5.77… fill:#… scale(0.… 0                path     <NA>  <NA> 
-    ## 3 3       path4… M 52.2… fill:#… <NA>      0                path     ABC   <NA> 
-    ## 4 4       path4… M 60.7… fill:#… <NA>      0                path     DEF   <NA> 
-    ## 5 5       path4… <NA>    color:… <NA>      <NA>             circle   node… 56.4…
-    ## 6 6       path4… <NA>    color:… <NA>      <NA>             circle   node… 34.3…
+    ## # A tibble: 6 × 22
+    ##   node_no id         d     style transform `connector-curv… node_set label cx   
+    ##   <chr>   <chr>      <chr> <chr> <chr>     <chr>            <chr>    <chr> <chr>
+    ## 1 1       path4920   M 5.… fill… scale(0.… 0                path     <NA>  <NA> 
+    ## 2 2       path4920-8 M 5.… fill… scale(0.… 0                path     <NA>  <NA> 
+    ## 3 3       path4770   M 52… fill… <NA>      0                path     ABC   <NA> 
+    ## 4 4       path4770-1 M 60… fill… <NA>      0                path     DEF   <NA> 
+    ## 5 5       path4747   <NA>  colo… <NA>      <NA>             circle   node… 56.4…
+    ## 6 6       path4747-3 <NA>  colo… <NA>      <NA>             circle   node… 34.3…
     ## # … with 13 more variables: cy <chr>, r <chr>, stockid <chr>, orient <chr>,
     ## #   refY <chr>, refX <chr>, isstock <chr>, space <chr>, x <chr>, y <chr>,
     ## #   role <chr>, width <chr>, height <chr>
@@ -120,7 +120,7 @@ path.
 get_attributes(SVG, node = "node_1", attr = c("label", "style"))
 ```
 
-    ## # A tibble: 1 x 2
+    ## # A tibble: 1 × 2
     ##   label  style                                                                  
     ##   <chr>  <chr>                                                                  
     ## 1 node_1 color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibi…
@@ -129,7 +129,7 @@ get_attributes(SVG, node = "node_1", attr = c("label", "style"))
 get_attributes(SVG, node = "ABC", attr = c("label", "style"))
 ```
 
-    ## # A tibble: 1 x 2
+    ## # A tibble: 1 × 2
     ##   label style                                                                   
     ##   <chr> <chr>                                                                   
     ## 1 ABC   fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-wid…
@@ -177,7 +177,7 @@ SVG2 <- read_svg("inst/extdata/central_metabolism.svg")
 head(SVG2@summary)
 ```
 
-    ## # A tibble: 6 x 24
+    ## # A tibble: 6 × 24
     ##   node_no id     d     style transform `connector-curv… node_set nodetypes label
     ##   <chr>   <chr>  <chr> <chr> <chr>     <chr>            <chr>    <chr>     <chr>
     ## 1 1       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
@@ -200,7 +200,7 @@ data(metabolic_flux)
 head(metabolic_flux)
 ```
 
-    ## # A tibble: 6 x 3
+    ## # A tibble: 6 × 3
     ##   substrate reaction flux_mmol_gDCW_h
     ##   <chr>     <chr>               <dbl>
     ## 1 formate   ACONT               0.366
@@ -234,17 +234,21 @@ SVG2 <- set_attributes(SVG2,
   replacement = paste0("stroke-width:", metabolic_flux_for$stroke_width))
 ```
 
-We can also change the color of all non-zero fluxes to green.
+We can also change the color according to metabolic flux.
 
 ``` r
-reactions_green <- metabolic_flux %>%
-  filter(substrate == "formate", flux_mmol_gDCW_h != 0) %>%
-  pull(reaction)
+# make color palette
+pal <- colorRampPalette(c("#ABABAB", "#009419", "#F0B000", "#FF4800"))(10)
+
+metabolic_flux_for <- metabolic_flux_for %>%
+  mutate(
+    stroke_color = stroke_width %>% {1+(./max(.))*9} %>% round,
+    stroke_color_rgb = pal[stroke_color])
 
 SVG2 <- set_attributes(SVG2,
-  node = reactions_green, attr = "style",
+  node = metabolic_flux_for$reaction, attr = "style",
   pattern = "stroke:#808080",
-  replacement = "stroke:#008A12")
+  replacement = paste0("stroke:", metabolic_flux_for$stroke_color_rgb))
 ```
 
 And for better look, reduce the size of the arrow heads. Arrow heads are
