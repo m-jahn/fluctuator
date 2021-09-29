@@ -81,3 +81,18 @@ SVG2 <- set_attributes(SVG2,
 ## -----------------------------------------------------------------------------
 write_svg(SVG2, file = "../inst/extdata/central_metabolism_mod.svg")
 
+## -----------------------------------------------------------------------------
+SVG2 <- set_attributes(SVG2,
+  node = filter(metabolic_flux_for, flux_mmol_gDCW_h < 0)$reaction,
+  attr = "style",
+  pattern = "marker-end:url\\(#marker[0-9]*\\);",
+  replacement = "")
+
+SVG2 <- set_attributes(SVG2,
+  node = filter(metabolic_flux_for, flux_mmol_gDCW_h >= 0)$reaction,
+  attr = "style",
+  pattern = "marker-start:url\\(#marker[0-9]*\\);",
+  replacement = "")
+
+write_svg(SVG2, file = "../inst/extdata/central_metabolism_direction.svg")
+

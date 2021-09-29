@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-09-28
+2021-09-29
 
 <!-- badges start -->
 
@@ -184,11 +184,11 @@ head(SVG2@summary)
     ## 2 2       path1… M 5.… fill… scale(-0… 0                path     <NA>      <NA> 
     ## 3 3       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
     ## 4 4       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## 5 5       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## 6 6       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## # … with 15 more variables: stockid <chr>, orient <chr>, refY <chr>,
-    ## #   refX <chr>, isstock <chr>, collect <chr>, y <chr>, x <chr>, role <chr>,
-    ## #   space <chr>, cx <chr>, cy <chr>, r <chr>, width <chr>, height <chr>
+    ## 5 5       path8… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## 6 6       path8… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
+    ## # … with 15 more variables: y <chr>, x <chr>, role <chr>, space <chr>,
+    ## #   stockid <chr>, orient <chr>, refY <chr>, refX <chr>, isstock <chr>,
+    ## #   collect <chr>, cx <chr>, cy <chr>, r <chr>, width <chr>, height <chr>
 
 The network has objects for metabolites, reactions, and reaction text
 labels. We want to modify thickness of arrows representing flux through
@@ -283,3 +283,42 @@ write_svg(SVG2, file = "../inst/extdata/central_metabolism_mod.svg")
 |                Original SVG                 |            SVG with overlaid fluxes             |
 |:-------------------------------------------:|:-----------------------------------------------:|
 | ![](../inst/extdata/central_metabolism.png) | ![](../inst/extdata/central_metabolism_mod.png) |
+
+### Advanced modifications
+
+Practically every object of the SVG files can be modified in R. Here is
+an (incomplete) list of modifications that can be useful when working
+with metabolic maps, or other scientific images that profit from
+overlaying numerical data.
+
+#### Change directionality of arrows
+
+Some reactions in the previous example are reversible, hence they have
+arrows at the start and at the end. However, the flux in one particular
+condition can only go in one direction. To visualize *only forward* or
+*only backward* flux, we can remove arrow heads from selected reactions.
+In the example below the `marker-end:...` string is removed for all
+reactions with negative flux and the `marker-start:...` string for all
+reactions with positive flux.
+
+``` r
+SVG2 <- set_attributes(SVG2,
+  node = filter(metabolic_flux_for, flux_mmol_gDCW_h < 0)$reaction,
+  attr = "style",
+  pattern = "marker-end:url\\(#marker[0-9]*\\);",
+  replacement = "")
+
+SVG2 <- set_attributes(SVG2,
+  node = filter(metabolic_flux_for, flux_mmol_gDCW_h >= 0)$reaction,
+  attr = "style",
+  pattern = "marker-start:url\\(#marker[0-9]*\\);",
+  replacement = "")
+
+write_svg(SVG2, file = "../inst/extdata/central_metabolism_direction.svg")
+```
+
+    ## [1] "../inst/extdata/central_metabolism_direction.svg"
+
+|            SVG with overlaid fluxes             |            SVG with correct directionality            |
+|:-----------------------------------------------:|:-----------------------------------------------------:|
+| ![](../inst/extdata/central_metabolism_mod.png) | ![](../inst/extdata/central_metabolism_direction.png) |
