@@ -16,7 +16,7 @@ set_attributes(
 \arguments{
 \item{xml}{(XMLsvg) XMLsvg object obtained from `read_svg()`}
 
-\item{node}{(character) node(s) to be displayed. Node names are searched using
+\item{node}{(character) node(s) to be modified. Node names are searched using
 the `node_attr` field}
 
 \item{node_attr}{(character) name of the attribute by which target nodes are
@@ -34,7 +34,7 @@ Returns an object of class `XMLsvg`
 \description{
 SVG files and the imported representation of class `XMLsvg` are
 hierarchically organized in node sets and nodes. Each node is a graphical
-object such as a path, rectancle, or text. The attributes of these nodes
+object such as a path, rectangle, or text. The attributes of these nodes
 can be changed with this function. Note that even when the output of
 `set_attributes()` is not assigned to a new object, the input `XMLsvg` object
 is still changed. This is because, unlike usual R work flows, attributes of

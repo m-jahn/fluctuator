@@ -3,7 +3,7 @@
 #'
 #' SVG files and the imported representation of class `XMLsvg` are
 #' hierarchically organized in node sets and nodes. Each node is a graphical
-#' object such as a path, rectancle, or text. The attributes of these nodes
+#' object such as a path, rectangle, or text. The attributes of these nodes
 #' can be changed with this function. Note that even when the output of
 #' `set_attributes()` is not assigned to a new object, the input `XMLsvg` object
 #' is still changed. This is because, unlike usual R work flows, attributes of
@@ -12,7 +12,7 @@
 #' @return Returns an object of class `XMLsvg`
 #'
 #' @param xml (XMLsvg) XMLsvg object obtained from `read_svg()`
-#' @param node (character) node(s) to be displayed. Node names are searched using
+#' @param node (character) node(s) to be modified. Node names are searched using
 #'   the `node_attr` field
 #' @param node_attr (character) name of the attribute by which target nodes are
 #'   filtered (default: "label")
@@ -41,7 +41,7 @@ set_attributes <- function(
       attr, pattern, replacement)
   } else {
   # otherwise loop through all attributes
-  # node, attr, pattern, and replacement must of same length or length 1
+  # node, attr, pattern, and replacement must be of same length or length 1
     df_params <- data.frame(node = node, attr = attr,
       pattern = pattern, replacement = replacement)
     apply(df_params, 1, function(p) {
