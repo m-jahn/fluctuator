@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-09-29
+2021-11-18
 
 <!-- badges start -->
 
@@ -322,3 +322,29 @@ write_svg(SVG2, file = "inst/extdata/central_metabolism_direction.svg")
 |            SVG with overlaid fluxes             |            SVG with correct directionality            |
 |:-----------------------------------------------:|:-----------------------------------------------------:|
 | ![](inst/extdata/central_metabolism_mod.png) | ![](inst/extdata/central_metabolism_direction.png) |
+
+#### Add numeric flux data
+
+We can also change text fields in the SVG file and by these means add
+numeric flux data. All we need is a template that has predefined text
+fields, whose values are then changed using `set_values()`. Values are
+different “fields” in XML files and therefore require an own
+modification function. We can load a template map that has text fields
+named `value_REACTION`.
+
+``` r
+SVG3 <- read_svg("inst/extdata/central_metabolism_values.svg")
+
+SVG3 <- set_values(SVG3,
+  node = paste0("value_", metabolic_flux_for$reaction),
+  value = round(metabolic_flux_for$flux_mmol_gDCW_h, 3)
+)
+
+write_svg(SVG3, file = "inst/extdata/central_metabolism_values_filled.svg")
+```
+
+    ## [1] "inst/extdata/central_metabolism_values_filled.svg"
+
+|              SVG template for values               |                SVG with added flux values                 |
+|:--------------------------------------------------:|:---------------------------------------------------------:|
+| ![](inst/extdata/central_metabolism_values.png) | ![](inst/extdata/central_metabolism_values_filled.png) |
