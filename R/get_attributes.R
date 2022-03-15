@@ -31,7 +31,7 @@ get_attributes <- function(xml, node = NULL,
   df <- xml@summary
   # filter by ID
   if (!is.null(node)) {
-    df <- dplyr::filter(df, df[[node_attr]] == node)
+    df <- dplyr::filter(df, df[[node_attr]] %in% node)
   }
   # select only desired attributes
   if (!is.null(attr)) {

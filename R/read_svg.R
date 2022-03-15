@@ -43,8 +43,7 @@ read_svg <- function(file, ...) {
 svg_summary_table <- function(xml) {
   # extract the non-metadata nodesets in the SVG
   nodeSets <- names(summary(xml)$nameCounts)
-  nodeSets <- base::intersect(nodeSets, c("path", "rect", "circle",
-    "marker", "tspan", "text"))
+  nodeSets <- base::setdiff(nodeSets, c("svg"))
   # collect node info in new tibble
   df_node <- lapply(nodeSets, function(nodeSet) {
     lapply(xml[paste0("//svg:", nodeSet)], function(node) {
