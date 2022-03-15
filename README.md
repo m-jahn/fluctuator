@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2021-11-18
+2022-03-15
 
 <!-- badges start -->
 
@@ -98,7 +98,7 @@ head(SVG@summary)
 ```
 
     ## # A tibble: 6 × 22
-    ##   node_no id         d     style transform `connector-curv… node_set label cx   
+    ##   node_no id         d     style transform `connector-cur…` node_set label cx   
     ##   <chr>   <chr>      <chr> <chr> <chr>     <chr>            <chr>    <chr> <chr>
     ## 1 1       path4920   M 5.… fill… scale(0.… 0                path     <NA>  <NA> 
     ## 2 2       path4920-8 M 5.… fill… scale(0.… 0                path     <NA>  <NA> 
@@ -178,7 +178,7 @@ head(SVG2@summary)
 ```
 
     ## # A tibble: 6 × 24
-    ##   node_no id     d     style transform `connector-curv… node_set nodetypes label
+    ##   node_no id     d     style transform `connector-cur…` node_set nodetypes label
     ##   <chr>   <chr>  <chr> <chr> <chr>     <chr>            <chr>    <chr>     <chr>
     ## 1 1       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
     ## 2 2       path1… M 5.… fill… scale(-0… 0                path     <NA>      <NA> 
@@ -330,11 +330,20 @@ numeric flux data. All we need is a template that has predefined text
 fields, whose values are then changed using `set_values()`. Values are
 different “fields” in XML files and therefore require an own
 modification function. We can load a template map that has text fields
-named `value_REACTION`.
+named `value_REACTION`. First we can inspect the current values using
+`get_values()` analogously to `get_attributes()`.
 
 ``` r
 SVG3 <- read_svg("inst/extdata/central_metabolism_values.svg")
+get_values(SVG3, node = c("value_ACONT", "value_AKGDH", "value_CS"))
+```
 
+    ## value_ACONT value_AKGDH    value_CS 
+    ##       "0.0"       "0.0"       "0.0"
+
+Then we set new values.
+
+``` r
 SVG3 <- set_values(SVG3,
   node = paste0("value_", metabolic_flux_for$reaction),
   value = round(metabolic_flux_for$flux_mmol_gDCW_h, 3)
