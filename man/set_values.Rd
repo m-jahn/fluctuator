@@ -7,7 +7,7 @@
 set_values(xml, node = NULL, node_attr = "label", value = NULL)
 }
 \arguments{
-\item{xml}{(XMLsvg) XMLsvg object obtained from `read_svg()`}
+\item{xml}{(XMLsvg) XMLsvg object obtained from \code{read_svg()}}
 
 \item{node}{(character) node(s) to be modified. Node names are searched using
 the `node_attr` field}
@@ -26,7 +26,7 @@ hierarchically organized in node sets and nodes. Each node is a graphical
 object such as a path, rectangle, or text. This function changes _values_ of
 nodes, most notably text fields. For _attributes_ which describe the properties
 of a value, see \code{set_attributes()}. Note that even when the output of
-`set_values()` is not assigned to a new object, the input `XMLsvg` object
+\code{set_values()} is not assigned to a new object, the input \code{XMLsvg} object
 is still changed. This is because, unlike usual R work flows, attributes of
 XML objects are changed on the fly (similar to python).
 }

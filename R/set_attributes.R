@@ -5,7 +5,7 @@
 #' hierarchically organized in node sets and nodes. Each node is a graphical
 #' object such as a path, rectangle, or text. The attributes of these nodes
 #' can be changed with this function. Note that even when the output of
-#' `set_attributes()` is not assigned to a new object, the input `XMLsvg` object
+#' \code{set_attributes()} is not assigned to a new object, the input `XMLsvg` object
 #' is still changed. This is because, unlike usual R work flows, attributes of
 #' XML objects are changed on the fly (similar to python).
 #'

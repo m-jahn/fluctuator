@@ -98,7 +98,9 @@ write_svg(SVG2, file = "../inst/extdata/central_metabolism_direction.svg")
 
 ## -----------------------------------------------------------------------------
 SVG3 <- read_svg("../inst/extdata/central_metabolism_values.svg")
+get_values(SVG3, node = c("value_ACONT", "value_AKGDH", "value_CS"))
 
+## -----------------------------------------------------------------------------
 SVG3 <- set_values(SVG3,
   node = paste0("value_", metabolic_flux_for$reaction),
   value = round(metabolic_flux_for$flux_mmol_gDCW_h, 3)

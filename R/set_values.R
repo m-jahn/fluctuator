@@ -6,13 +6,13 @@
 #' object such as a path, rectangle, or text. This function changes _values_ of
 #' nodes, most notably text fields. For _attributes_ which describe the properties
 #' of a value, see \code{set_attributes()}. Note that even when the output of
-#' `set_values()` is not assigned to a new object, the input `XMLsvg` object
+#' \code{set_values()} is not assigned to a new object, the input \code{XMLsvg} object
 #' is still changed. This is because, unlike usual R work flows, attributes of
 #' XML objects are changed on the fly (similar to python).
 #'
 #' @return Returns an object of class `XMLsvg`
 #'
-#' @param xml (XMLsvg) XMLsvg object obtained from `read_svg()`
+#' @param xml (XMLsvg) XMLsvg object obtained from \code{read_svg()}
 #' @param node (character) node(s) to be modified. Node names are searched using
 #'   the `node_attr` field
 #' @param node_attr (character) name of the attribute by which target nodes are
@@ -39,7 +39,7 @@ set_values <- function(
   if (all(sapply(list(node, value), length) == 1)) {
     set_single_value(xml, node, node_attr, value)
   } else {
-  # otherwise loop through all attributes
+  # otherwise loop through all nodes
   # node and value must be of same length or length 1
     df_params <- data.frame(node = node, value = value)
     apply(df_params, 1, function(p) {
@@ -64,7 +64,7 @@ set_single_value <- function(
       target_node <- XML::xmlGetAttr(curr_node, name = node_attr)
       if (!is.null(target_node)) {
         if (target_node %in% node) {
-          if (!is.null(XML::getChildrenStrings(curr_node))) {
+          if (length(XML::getChildrenStrings(curr_node)) > 0) {
             text_lab <- XML::xmlChildren(curr_node)[[1]]
             XML::xmlValue(text_lab) = as.character(value)
           }

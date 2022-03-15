@@ -3,8 +3,10 @@
 #'
 #' SVG files and the imported representation of class `XMLsvg` are
 #' hierarchically organized in node sets and nodes. Each node is a graphical
-#' object such as a path, rectancle, or text. The attributes of these nodes
-#' can be queried using this function.
+#' object such as a path, rectangle, or text. The attributes of these nodes
+#' can be queried using this function. Attributes relate to the _style_ of an
+#' element. If you want to retrieve the _values_ of an element (e.g. content of
+#' a text field), use `get_values()` instead.
 #'
 #' @return Returns a `tibble` with rows being the selected nodes and
 #'   columns being the selected attributes
