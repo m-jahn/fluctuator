@@ -40,28 +40,27 @@ head(metabolic_flux)
 get_attributes(SVG2, node = "GAPDH") %>% pull(style)
 
 ## -----------------------------------------------------------------------------
-metabolic_flux_for <- metabolic_flux %>%
-  filter(substrate == "formate") %>%
+metabolic_flux <- metabolic_flux %>%
   mutate(stroke_width = 0.5 + 0.2*sqrt(abs(flux_mmol_gDCW_h)))
 
 SVG2 <- set_attributes(SVG2,
-  node = metabolic_flux_for$reaction, attr = "style",
+  node = metabolic_flux$reaction, attr = "style",
   pattern = "stroke-width:[0-9]+\\.[0-9]+",
-  replacement = paste0("stroke-width:", metabolic_flux_for$stroke_width))
+  replacement = paste0("stroke-width:", metabolic_flux$stroke_width))
 
 ## -----------------------------------------------------------------------------
 # make color palette
 pal <- colorRampPalette(c("#ABABAB", "#009419", "#F0B000", "#FF4800"))(10)
 
-metabolic_flux_for <- metabolic_flux_for %>%
+metabolic_flux <- metabolic_flux %>%
   mutate(
     stroke_color = stroke_width %>% {1+(./max(.))*9} %>% round,
     stroke_color_rgb = pal[stroke_color])
 
 SVG2 <- set_attributes(SVG2,
-  node = metabolic_flux_for$reaction, attr = "style",
+  node = metabolic_flux$reaction, attr = "style",
   pattern = "stroke:#808080",
-  replacement = paste0("stroke:", metabolic_flux_for$stroke_color_rgb))
+  replacement = paste0("stroke:", metabolic_flux$stroke_color_rgb))
 
 ## -----------------------------------------------------------------------------
 SVG2 <- set_attributes(SVG2, 
@@ -83,13 +82,13 @@ write_svg(SVG2, file = "../inst/extdata/central_metabolism_mod.svg")
 
 ## -----------------------------------------------------------------------------
 SVG2 <- set_attributes(SVG2,
-  node = filter(metabolic_flux_for, flux_mmol_gDCW_h < 0)$reaction,
+  node = filter(metabolic_flux, flux_mmol_gDCW_h < 0)$reaction,
   attr = "style",
   pattern = "marker-end:url\\(#marker[0-9]*\\);",
   replacement = "")
 
 SVG2 <- set_attributes(SVG2,
-  node = filter(metabolic_flux_for, flux_mmol_gDCW_h >= 0)$reaction,
+  node = filter(metabolic_flux, flux_mmol_gDCW_h >= 0)$reaction,
   attr = "style",
   pattern = "marker-start:url\\(#marker[0-9]*\\);",
   replacement = "")
@@ -102,8 +101,8 @@ get_values(SVG3, node = c("value_ACONT", "value_AKGDH", "value_CS"))
 
 ## -----------------------------------------------------------------------------
 SVG3 <- set_values(SVG3,
-  node = paste0("value_", metabolic_flux_for$reaction),
-  value = round(metabolic_flux_for$flux_mmol_gDCW_h, 3)
+  node = paste0("value_", metabolic_flux$reaction),
+  value = round(metabolic_flux$flux_mmol_gDCW_h, 3)
 )
 
 write_svg(SVG3, file = "../inst/extdata/central_metabolism_values_filled.svg")
