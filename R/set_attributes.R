@@ -77,19 +77,21 @@ set_single_attribute <- function(
 # recursively modify 1 attribute at a time, for 1 node and all its children
 modify_node_rec <- function(curr_node, attr, pattern, replacement) {
   att <- XML::xmlGetAttr(curr_node, name = attr)
-  att <- gsub(pattern, replacement, att)
-  XML::removeAttributes(curr_node, .attrs = attr)
-  att_list <- stats::setNames(list(curr_node, att), c("node", attr))
-  do.call(XML::addAttributes, att_list)
-  # recursively call function for children
-  children <- XML::xmlChildren(curr_node)
-  if (length(children)) {
-    lapply(children, function(curr_node) {
-      modify_node_rec(
-        curr_node = curr_node,
-        attr = attr,
-        pattern = pattern,
-        replacement = replacement)
-    })
+  if (!is.null(att)) {
+    att <- gsub(pattern, replacement, att)
+    XML::removeAttributes(curr_node, .attrs = attr)
+    att_list <- stats::setNames(list(curr_node, att), c("node", attr))
+    do.call(XML::addAttributes, att_list)
+    # recursively call function for children
+    children <- XML::xmlChildren(curr_node)
+    if (length(children)) {
+      lapply(children, function(curr_node) {
+        modify_node_rec(
+          curr_node = curr_node,
+          attr = attr,
+          pattern = pattern,
+          replacement = replacement)
+      })
+    }
   }
 }
