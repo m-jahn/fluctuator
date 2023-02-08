@@ -6,7 +6,7 @@ Michael Jahn
 <!-- badges start -->
 
 [![R build
-status](https://github.com/m-jahn/lattice-tools/workflows/R-CMD-check/badge.svg)](https://github.com/m-jahn/fluctuator/actions)
+status](https://github.com/m-jahn/fluctuator/workflows/R-CMD-check/badge.svg)](https://github.com/m-jahn/fluctuator/actions)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/m-jahn)
 ![GitHub issues](https://img.shields.io/github/issues/m-jahn/fluctuator)
 ![GitHub last
