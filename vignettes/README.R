@@ -1,7 +1,7 @@
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  devtools::install_github("m-jahn/fluctuator")
 
-## ---- message = FALSE---------------------------------------------------------
+## ----message = FALSE----------------------------------------------------------
 library(dplyr)
 library(fluctuator)
 
@@ -25,7 +25,7 @@ SVG <- set_attributes(SVG, node = "node_1", attr = "style",
 SVG <- set_attributes(SVG, node = c("ABC", "DEF"), attr = "style",
   pattern = "stroke-width:1.32291663", replacement = c("stroke-width:2.5", "stroke-width:0.5"))
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  write_svg(SVG, file = "../inst/extdata/example_network_mod.svg")
 
 ## -----------------------------------------------------------------------------

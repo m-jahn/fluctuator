@@ -22,6 +22,7 @@
 #' @importFrom dplyr select
 #' @importFrom dplyr filter
 #' @importFrom dplyr all_of
+#' @importFrom dplyr .data
 #'
 #' @export
 get_attributes <- function(xml, node = NULL,
@@ -29,13 +30,26 @@ get_attributes <- function(xml, node = NULL,
 ) {
   stopifnot(class(xml) == "XMLsvg")
   df <- xml@summary
+  # check if node_attr exists
+  check_node_attr(df, node_attr)
   # filter by ID
   if (!is.null(node)) {
-    df <- dplyr::filter(df, df[[node_attr]] %in% node)
+    df <- dplyr::filter(df, .data[[node_attr]] %in% node)
   }
   # select only desired attributes
   if (!is.null(attr)) {
     df <- dplyr::select(df, dplyr::all_of(attr))
   }
   df
+}
+
+check_node_attr <- function(df, node_attr) {
+  if (!node_attr %in% colnames(df)) {
+    stop(
+      paste0(
+        "node attribute '", node_attr,
+        "' is not available in this svg file. Try for example node_attr = 'id'"
+      )
+    )
+  }
 }

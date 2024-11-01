@@ -10,7 +10,8 @@ set_attributes(
   node_attr = "label",
   attr = NULL,
   pattern = NULL,
-  replacement = NULL
+  replacement = NULL,
+  verbose = TRUE
 )
 }
 \arguments{
@@ -24,9 +25,11 @@ filtered (default: "label")}
 
 \item{attr}{(character) the desired attribute to be displayed, such as `id`, `style`}
 
-\item{pattern}{(character) (sub-) string of the attribute vlaue to be modified}
+\item{pattern}{(character) (sub-) string of the attribute value to be modified}
 
 \item{replacement}{(character) string that is used as replacement for `pattern`}
+
+\item{verbose}{(logical) print messages about the number of changed nodes}
 }
 \value{
 Returns an object of class `XMLsvg`

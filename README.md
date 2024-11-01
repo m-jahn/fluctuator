@@ -1,7 +1,7 @@
 fluctuator
 ================
 Michael Jahn
-2022-03-16
+2024-11-01
 
 <!-- badges start -->
 
@@ -39,10 +39,10 @@ Options to customize the metabolic maps are too restricted.
 
 Package info:
 
--   Maintainer: Michael Jahn, Science for Life Lab, Stockholm
--   License: GPL-3
--   Depends: R (&gt;= 3.5.0)
--   Imports: `methods`, `XML`, `dplyr`
+- Maintainer: Michael Jahn, Science for Life Lab, Stockholm
+- License: GPL-3
+- Depends: R (\>= 3.5.0)
+- Imports: `methods`, `XML`, `dplyr`
 
 ## Installation
 
@@ -98,15 +98,15 @@ head(SVG@summary)
 ```
 
     ## # A tibble: 6 × 23
-    ##   node_no id         d     style transform `connector-cur…` node_set label cx   
-    ##   <chr>   <chr>      <chr> <chr> <chr>     <chr>            <chr>    <chr> <chr>
-    ## 1 1       path4920   M 5.… fill… scale(0.… 0                path     <NA>  <NA> 
-    ## 2 2       path4920-8 M 5.… fill… scale(0.… 0                path     <NA>  <NA> 
-    ## 3 3       path4770   M 52… fill… <NA>      0                path     ABC   <NA> 
-    ## 4 4       path4770-1 M 60… fill… <NA>      0                path     DEF   <NA> 
-    ## 5 5       path4747   <NA>  colo… <NA>      <NA>             circle   node… 56.4…
-    ## 6 6       path4747-3 <NA>  colo… <NA>      <NA>             circle   node… 34.3…
-    ## # … with 14 more variables: cy <chr>, r <chr>, stockid <chr>, orient <chr>,
+    ##   node_no id    d     style transform `connector-curvature` node_set label cx   
+    ##   <chr>   <chr> <chr> <chr> <chr>     <chr>                 <chr>    <chr> <chr>
+    ## 1 1       path… M 5.… fill… scale(0.… 0                     path     <NA>  <NA> 
+    ## 2 2       path… M 5.… fill… scale(0.… 0                     path     <NA>  <NA> 
+    ## 3 3       path… M 52… fill… <NA>      0                     path     ABC   <NA> 
+    ## 4 4       path… M 60… fill… <NA>      0                     path     DEF   <NA> 
+    ## 5 5       path… <NA>  colo… <NA>      <NA>                  circle   node… 56.4…
+    ## 6 6       path… <NA>  colo… <NA>      <NA>                  circle   node… 34.3…
+    ## # ℹ 14 more variables: cy <chr>, r <chr>, stockid <chr>, orient <chr>,
     ## #   refY <chr>, refX <chr>, isstock <chr>, space <chr>, x <chr>, y <chr>,
     ## #   role <chr>, groupmode <chr>, width <chr>, height <chr>
 
@@ -149,10 +149,16 @@ also change the thickness of the two arrows (reactions) `ABC` and `DEF`.
 ``` r
 SVG <- set_attributes(SVG, node = "node_1", attr = "style",
   pattern = "fill:#808080", replacement = "fill:#FF0000")
+```
 
+    ## New attributes were set for 1 node(s).
+
+``` r
 SVG <- set_attributes(SVG, node = c("ABC", "DEF"), attr = "style",
   pattern = "stroke-width:1.32291663", replacement = c("stroke-width:2.5", "stroke-width:0.5"))
 ```
+
+    ## New attributes were set for 2 node(s).
 
 ### Export modified SVG file
 
@@ -178,15 +184,15 @@ head(SVG2@summary)
 ```
 
     ## # A tibble: 6 × 25
-    ##   node_no id     d     style transform `connector-cur…` node_set nodetypes label
-    ##   <chr>   <chr>  <chr> <chr> <chr>     <chr>            <chr>    <chr>     <chr>
-    ## 1 1       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## 2 2       path1… M 5.… fill… scale(-0… 0                path     <NA>      <NA> 
-    ## 3 3       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## 4 4       path1… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## 5 5       path8… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## 6 6       path8… M 5.… fill… scale(0.… 0                path     <NA>      <NA> 
-    ## # … with 16 more variables: y <chr>, x <chr>, role <chr>, space <chr>,
+    ##   node_no id      d     style transform `connector-curvature` node_set nodetypes
+    ##   <chr>   <chr>   <chr> <chr> <chr>     <chr>                 <chr>    <chr>    
+    ## 1 1       path14… M 5.… fill… scale(0.… 0                     path     <NA>     
+    ## 2 2       path14… M 5.… fill… scale(-0… 0                     path     <NA>     
+    ## 3 3       path12… M 5.… fill… scale(0.… 0                     path     <NA>     
+    ## 4 4       path12… M 5.… fill… scale(0.… 0                     path     <NA>     
+    ## 5 5       path82… M 5.… fill… scale(0.… 0                     path     <NA>     
+    ## 6 6       path80… M 5.… fill… scale(0.… 0                     path     <NA>     
+    ## # ℹ 17 more variables: label <chr>, y <chr>, x <chr>, role <chr>, space <chr>,
     ## #   stockid <chr>, orient <chr>, refY <chr>, refX <chr>, isstock <chr>,
     ## #   collect <chr>, cx <chr>, cy <chr>, r <chr>, groupmode <chr>, width <chr>,
     ## #   height <chr>
@@ -234,6 +240,8 @@ SVG2 <- set_attributes(SVG2,
   replacement = paste0("stroke-width:", metabolic_flux$stroke_width))
 ```
 
+    ## New attributes were set for 48 node(s).
+
 We can also change the color according to metabolic flux.
 
 ``` r
@@ -251,10 +259,17 @@ SVG2 <- set_attributes(SVG2,
   replacement = paste0("stroke:", metabolic_flux$stroke_color_rgb))
 ```
 
-And for better look, reduce the size of the arrow heads. Arrow heads are
-called `marker` in Inkscape SVG (note that node name attribute changed
-to `id`). To modify size, we change the `transform` field of the marker
-nodes. Needs to be done separately for start and end arrows.
+    ## New attributes were set for 48 node(s).
+
+And for better looks, we can reduce the size of the arrow heads. Arrow
+heads are called `marker` in Inkscape SVGs.
+
+**Important**: Note that the node attribute that is used to filter
+matching objects changes to `id` now. This can be a different attribute
+for different types of SVG files or editors (Inkscape, Illustrator, …).
+
+To modify the size, we change the `transform` field of the `marker`
+nodes. This needs to be done separately for start and end arrows.
 
 ``` r
 SVG2 <- set_attributes(SVG2, 
@@ -263,7 +278,11 @@ SVG2 <- set_attributes(SVG2,
   attr = "transform",
   pattern = "scale\\(0.2\\)",
   replacement = "scale(0.15)")
+```
 
+    ## New attributes were set for 37 node(s).
+
+``` r
 SVG2 <- set_attributes(SVG2, 
   node = grep("marker", SVG2@summary$id, value = TRUE),
   node_attr = "id",
@@ -271,6 +290,8 @@ SVG2 <- set_attributes(SVG2,
   pattern = "scale\\(-0.2\\)",
   replacement = "scale(-0.15)")
 ```
+
+    ## New attributes were set for 37 node(s).
 
 Export the modified SVG file.
 
@@ -307,13 +328,21 @@ SVG2 <- set_attributes(SVG2,
   attr = "style",
   pattern = "marker-end:url\\(#marker[0-9]*\\);",
   replacement = "")
+```
 
+    ## New attributes were set for 13 node(s).
+
+``` r
 SVG2 <- set_attributes(SVG2,
   node = filter(metabolic_flux, flux_mmol_gDCW_h >= 0)$reaction,
   attr = "style",
   pattern = "marker-start:url\\(#marker[0-9]*\\);",
   replacement = "")
+```
 
+    ## New attributes were set for 35 node(s).
+
+``` r
 write_svg(SVG2, file = "inst/extdata/central_metabolism_direction.svg")
 ```
 
