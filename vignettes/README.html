@@ -706,8 +706,11 @@ attributes using the <code>set_attributes()</code> function. The
 function takes four important arguments: the name (<code>label</code>)
 of the <code>node</code> whose attributes should be changed, and which
 corresponds to Inkscape object names. The <code>attribute</code> that is
-supposed to be changed (e.g. <code>style</code>). And a pattern +
-replacement that modifies the character value of the attribute.</p>
+supposed to be changed (e.g. <code>style</code>). And finally a
+<code>pattern</code> as well as a <code>replacement</code> that modifies
+the character value of the attribute. If <code>pattern</code> is an
+empty string (<code>&quot;&quot;</code>), the entire value of the attribute will
+be overwritten with the replacement.</p>
 <p>In this example we change the fill color of <code>node_1</code> to
 red. Then we also change the thickness of the two arrows (reactions)
 <code>ABC</code> and <code>DEF</code>.</p>

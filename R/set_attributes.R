@@ -95,7 +95,11 @@ set_single_attribute <- function(
 modify_node_rec <- function(curr_node, attr, pattern, replacement, changed_nodes = 0) {
   att <- XML::xmlGetAttr(curr_node, name = attr)
   if (!is.null(att)) {
-    att <- gsub(pattern, replacement, att)
+    if (pattern == "") {
+      att <- replacement
+    } else {
+      att <- gsub(pattern, replacement, att)
+    }
     XML::removeAttributes(curr_node, .attrs = attr)
     att_list <- stats::setNames(list(curr_node, att), c("node", attr))
     do.call(XML::addAttributes, att_list)

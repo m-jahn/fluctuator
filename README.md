@@ -140,8 +140,10 @@ The most important feature of this package is to change SVG attributes
 using the `set_attributes()` function. The function takes four important
 arguments: the name (`label`) of the `node` whose attributes should be
 changed, and which corresponds to Inkscape object names. The `attribute`
-that is supposed to be changed (e.g. `style`). And a pattern +
-replacement that modifies the character value of the attribute.
+that is supposed to be changed (e.g. `style`). And finally a `pattern`
+as well as a `replacement` that modifies the character value of the
+attribute. If `pattern` is an empty string (`""`), the entire value of
+the attribute will be overwritten with the replacement.
 
 In this example we change the fill color of `node_1` to red. Then we
 also change the thickness of the two arrows (reactions) `ABC` and `DEF`.
